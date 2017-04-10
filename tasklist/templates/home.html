@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TaskList</title>
+  <link rel="stylesheet" href="/static/css/home.css">
+</head>
+<body>
+{% if tasks %}
+<h1>Task List:</h1>
+<table class="rwd-table">
+  {% for task in tasks %}
+  <tr class="{% if task.status == 'TO DO' %}task-todo{% else %}task-done{% endif %}">
+    <td>{{task.description}}</td>
+    <td>{{task.owner.first_name}} {{task.owner.last_name}}</td>
+    <td>{{task.status}}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %}
+NO TASKS
+{% endif %}
+<button>Add</button>
+</body>
+</html>

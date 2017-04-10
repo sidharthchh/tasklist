@@ -1,0 +1,8 @@
+
+Django==1.10.5
+social-auth-app-django==1.1.0
+whitenoise==3.2.2
+dj-database-url==0.4.1
+dj-email-url==0.0.10
+
+
